@@ -57,8 +57,8 @@ code {
   margin: auto;
   padding-top: 30px;
 }
-.login7 h6{
-  padding-bottom:20px;
+.login7 h6 {
+  padding-bottom: 20px;
 }
 .login8 {
   margin-top: 30px;
@@ -460,8 +460,11 @@ table {
   margin: 0;
 }
 .sport4 td {
-  border: 1px solid black;
   height: 60px;
+  color: #000;
+  font-size: 14px;
+  font-family: Manrope;
+  font-weight: 600;
 }
 .sport3 {
   width: 20%;
@@ -512,7 +515,26 @@ table {
   margin-top: 20px;
   margin-left: 130px;
 }
-
+.sport9 {
+  display: flex;
+  gap: 5px;
+}
+.sport9 img {
+  width: 30px;
+  height: 30px;
+}
+.sport10 li {
+  color: #2965ff;
+  font-size: 18px;
+  font-family: Manrope;
+  font-weight: 600;
+}
+.sport11 li {
+  color: #ff5b5b;
+  font-size: 18px;
+  font-family: Manrope;
+  font-weight: 600;
+}
 /* ====== Upload ======*/
 
 .upload1 {
@@ -654,6 +676,7 @@ table {
   border-radius: 20px;
   background: linear-gradient(180deg, #1a51df 0%, #0538bb 100%);
   margin-left: 1%;
+  margin-top: 20px;
 }
 .predict8 h4 {
   color: #fffded;
@@ -818,4 +841,142 @@ table {
   margin-top: 10px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+.dash100 {
+  display: none;
+}
+
+/* ====== Mobile Styling ==========*/
+
+@media (max-width: 800px) {
+  .dash2 {
+    display: none;
+  }
+  .dash100 {
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .dash4 {
+    flex-direction: column;
+  }
+  .dash5 {
+    margin-left: 5%;
+    width: 100%;
+  }
+  .dash9 img {
+    width: 100%;
+  }
+  .dash15 {
+    flex-direction: column;
+    margin-left: 20%;
+  }
+  .top1 {
+    flex-direction: column;
+  }
+  .dash1 {
+    margin-left: 10%;
+  }
+
+  /* ===== sports styling=====*/
+  .sport1 {
+    flex-direction: column;
+  }
+  .sport100 {
+    margin: 0;
+  }
+  .sport6 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .sport3 {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  /* ===== upload styling =====*/
+  .upload1 {
+    flex-direction: column;
+  }
+  .upload4 {
+    width: 100%;
+  }
+  .upload5 {
+    width: 100%;
+  }
+  .upload6 table {
+    width: 800px !important;
+    overflow-x: auto;
+  }
+  .upload5 select {
+    width: 40%;
+  }
+  /*======= predict styling ==========*/
+  .predict1 {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .predict2 {
+    width: 100%;
+  }
+  .predict3 {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .predict8 {
+    margin-top: 30px;
+  }
+  .predict4 {
+    width: 100%;
+  }
+  .predict8 {
+    width: 100%;
+  }
+  .predict9 {
+    width: 100%;
+  }
+  .predict9 img {
+    width: 100%;
+  }
+  /*===== add styling =====*/
+  .add1 {
+    flex-direction: column;
+  }
+  .add2 {
+    width: 100%;
+  }
+  .add3 {
+    width: 100%;
+  }
+  .add4 {
+    grid-template-columns: auto;
+  }
+  /* ======= login styling =====*/
+  .login2 {
+    flex-direction: column;
+  }
+  .login3 {
+    width: 100%;
+  }
+  .login7 {
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+  .login5 {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+  }
+  /* ========= report styling ======*/
+  .report2{
+    width:100%;
+  }
 }

@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import TopPart from "./TopPart";
 import Navbar from "./Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import { useNavigate } from "react-router-dom";
+import UploadAdd from "./UploadAdd";
+import ApexChart from "./ApexChart";
 
-import img from "../Images/c15.png";
 import img2 from "../Images/c18.png";
 import img3 from "../Images/c20.png";
 
+
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [show2, setShow2] = useState(false);
   return (
     <>
+      <UploadAdd show={show2} onHide={() => setShow2(false)} />
       <div className="dash1">
         <div className="dash2">
           <Sidebar />
         </div>
         <div className="dash3">
+          <div className="dash100" onClick={() => handleShow(true)}>
+            <i class="fa-solid fa-bars"></i>
+          </div>
           <div className="dash4">
             <div className="dash5">
               <TopPart />
@@ -45,7 +58,7 @@ const Dashboard = () => {
                     <option value="">Yearly</option>
                   </select>
                 </div>
-                <img src={img} alt="" />
+                <ApexChart />
               </div>
             </div>
             <div className="dash6">
@@ -58,7 +71,12 @@ const Dashboard = () => {
                   <p>Upload adds of every section</p>
                 </div>
                 <div className="dash14">
-                  <img src={img2} style={{paddingRight:"40px"}} alt="" onClick={() => navigate("/add")} />
+                  <img
+                    src={img2}
+                    style={{ paddingRight: "40px" }}
+                    alt=""
+                    onClick={() => navigate("/add")}
+                  />
                 </div>
               </div>
               <div className="dash15">
@@ -82,7 +100,7 @@ const Dashboard = () => {
                       <img src={img3} alt="" />
                     </div>
                     <div className="dash20">
-                      <img src={img2} alt="" onClick={()=>navigate("/add")} />
+                      <img src={img2} alt="" onClick={() => navigate("/add")} />
                     </div>
                   </div>
                 </div>
@@ -105,6 +123,14 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Sidebar />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };

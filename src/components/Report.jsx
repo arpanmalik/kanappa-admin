@@ -4,19 +4,31 @@ import TopPart from "./TopPart";
 import Navbar from "./Navbar";
 import Calendar from "react-calendar";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import UploadAdd from "./UploadAdd";
+import ApexChart from "./ApexChart";
+
 import "react-calendar/dist/Calendar.css";
-import img from "../Images/c15.png";
 import img2 from "../Images/c18.png";
 
 const ReportAnalysis = () => {
   const [cal, setCal] = useState(new Date());
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [show2, setShow2] = useState(false);
   return (
     <>
+     <UploadAdd show={show2} onHide={() => setShow2(false)} />
       <div className="dash1">
         <div className="dash2">
           <Sidebar />
         </div>
         <div className="dash3">
+          <div className="dash100" onClick={()=>handleShow(true)}>
+              <i class="fa-solid fa-bars"></i>
+          </div>
           <div className="predict1">
             <div className="predict2">
               <TopPart />
@@ -45,7 +57,7 @@ const ReportAnalysis = () => {
                     <option value="">Yearly</option>
                   </select>
                 </div>
-                <img src={img} alt="" style={{ width: "98%" }} />
+                <ApexChart />
               </div>
             </div>
             <div className="predict3">
@@ -57,7 +69,7 @@ const ReportAnalysis = () => {
                     <p>Questions for the Predict and win section</p>
                   </div>
                   <div className="predict6">
-                    <img src={img2} alt="" />
+                    <img src={img2} alt="" onClick={()=>setShow2(true)} />
                   </div>
                 </div>
                 <div className="report2">
@@ -75,13 +87,21 @@ const ReportAnalysis = () => {
                       <option value="">Yearly</option>
                     </select>
                   </div>
-                  <img src={img} alt="" style={{ width: "98%" }} />
+                  <ApexChart />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Sidebar />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };

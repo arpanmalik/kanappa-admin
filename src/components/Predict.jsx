@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "./Sidebar";
 import TopPart from "./TopPart";
 import Navbar from "./Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import img from "../Images/c18.png";
 import img2 from "../Images/c22.png";
 
 const Predict = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="dash1">
@@ -14,6 +19,9 @@ const Predict = () => {
           <Sidebar />
         </div>
         <div className="dash3">
+          <div className="dash100" onClick={()=>handleShow(true)}>
+              <i class="fa-solid fa-bars"></i>
+          </div>
           <div className="predict1">
             <div className="predict2">
               <TopPart />
@@ -88,6 +96,14 @@ const Predict = () => {
           </div>
         </div>
       </div>
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Sidebar />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };

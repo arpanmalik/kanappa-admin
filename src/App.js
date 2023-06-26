@@ -8,6 +8,7 @@ import Upload from "./components/Upload";
 import Predict from "./components/Predict";
 import ReportAnalysis from "./components/Report";
 import Add from "./components/Add";
+import UploadAdd from "./components/UploadAdd";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/predict" element={<Predict />} />
           <Route path="/report" element={<ReportAnalysis />} />
           <Route path="/add" element={<Add />} />
+          <Route path="/upload-add" element={<UploadAdd />} />
         </Routes>
       </BrowserRouter>
     </div>

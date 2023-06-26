@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import TopPart from "./TopPart";
 import Navbar from "./Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import UploadModal from "./UploadModal";
 import UploadModal2 from "./UploadModal2";
 import UploadReel from "./UploadReel";
 import UploadPoll from "./UploadPoll";
 import UploadStory from "./UploadStory";
+import UploadAdd from "./UploadAdd";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import img from "../Images/c18.png";
@@ -18,6 +21,11 @@ const Add = () => {
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
   const [show5, setShow5] = useState(false);
+  const [show6, setShow6] = useState(false);
+
+  const [showt, setShowt] = useState(false);
+  const handleClose = () => setShowt(false);
+  const handleShow = () => setShowt(true);
   return (
     <>
       <UploadModal show={show} onHide={() => setShow(false)} />
@@ -25,11 +33,15 @@ const Add = () => {
       <UploadReel show={show3} onHide={() => setShow3(false)} />
       <UploadPoll show={show4} onHide={() => setShow4(false)} />
       <UploadStory show={show5} onHide={() => setShow5(false)} />
+      <UploadAdd show={show6} onHide={() => setShow6(false)} />
       <div className="dash1">
         <div className="dash2">
           <Sidebar />
         </div>
         <div className="dash3">
+          <div className="dash100" onClick={()=>handleShow(true)}>
+              <i class="fa-solid fa-bars"></i>
+          </div>
           <div className="add1">
             <div className="add2">
               <TopPart />
@@ -38,11 +50,11 @@ const Add = () => {
               <Navbar />
               <div className="predict4">
                 <div className="predict5">
-                  <h6>+Add Questions</h6>
+                  <h6>+Add adds</h6>
                   <p>Questions for the Predict and win section</p>
                 </div>
                 <div className="predict6">
-                  <img src={img} alt="" />
+                  <img src={img} alt="" onClick={()=>setShow6(true)}/>
                 </div>
               </div>
             </div>
@@ -141,6 +153,14 @@ const Add = () => {
           </div>
         </div>
       </div>
+      <Offcanvas show={showt} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Sidebar />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };
