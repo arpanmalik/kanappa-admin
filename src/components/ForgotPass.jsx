@@ -12,9 +12,8 @@ const ForgotPass = () => {
           <div className="login3">
             <img className="login5" src={img} alt="" />
           </div>
-          <div className="login4"></div>
-        </div>
-        <div className="login7">
+          <div className="login4">
+          <div className="login7">
           <img  src={img3} alt="" />
           <div className="login8">
             <p>Change Your</p>
@@ -30,6 +29,8 @@ const ForgotPass = () => {
               <i class="fa-solid fa-eye"></i>
             </div>
             <button onClick={()=>navigate("/")}>Save</button>
+          </div>
+        </div>
           </div>
         </div>
       </div>

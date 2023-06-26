@@ -1,12 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 import img from "../Images/c20.png";
 import img2 from "../Images/c18.png";
 import img3 from "../Images/c24.png";
 import img4 from "../Images/c25.png";
+import img5 from "../Images/c26.png";
+import img6 from "../Images/c27.png";
+import img7 from "../Images/c28.png";
+import img8 from "../Images/c29.png";
 
 const Sports = () => {
   const [show, setShow] = useState(false);
@@ -14,13 +18,13 @@ const Sports = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <div className="dash1 sport100" >
+      <div className="dash1 sport100">
         <div className="dash2">
           <Sidebar />
         </div>
         <div className="dash3">
-          <div className="dash100" onClick={()=>handleShow(true)}>
-              <i class="fa-solid fa-bars"></i>
+          <div className="dash100" onClick={() => handleShow(true)}>
+            <i class="fa-solid fa-bars"></i>
           </div>
           <div className="sport1">
             <div className="sport2">
@@ -36,6 +40,74 @@ const Sports = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <td>International Match</td>
+                    <td>10.05.2023</td>
+                    <td>04:00 AM</td>
+                    <td>
+                      <div className="sport9">
+                        <img src={img3} alt="" />
+                        <p>vs</p>
+                        <img src={img4} alt="" />
+                      </div>
+                    </td>
+                    <td className="sport10">
+                      <ul>
+                        <li>Successful</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Bigbash</td>
+                    <td>10.05.2023</td>
+                    <td>04:00 AM</td>
+                    <td>
+                      <div className="sport9">
+                        <img src={img5} alt="" />
+                        <p>vs</p>
+                        <img src={img6} alt="" />
+                      </div>
+                    </td>
+                    <td className="sport11">
+                      <ul>
+                        <li>Unsuccessful</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PCL</td>
+                    <td>10.05.2023</td>
+                    <td>04:00 AM</td>
+                    <td>
+                      <div className="sport9">
+                        <img src={img6} alt="" />
+                        <p>vs</p>
+                        <img src={img5} alt="" />
+                      </div>
+                    </td>
+                    <td className="sport10">
+                      <ul>
+                        <li>Unsuccessful</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IPL</td>
+                    <td>10.05.2023</td>
+                    <td>04:00 AM</td>
+                    <td>
+                      <div className="sport9">
+                        <img src={img8} alt="" />
+                        <p>vs</p>
+                        <img src={img7} alt="" />
+                      </div>
+                    </td>
+                    <td className="sport11">
+                      <ul>
+                        <li>Successful</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
                     <td>Lorem Ipsum</td>
                     <td>10.05.2023</td>
                     <td>04:00 AM</td>
@@ -46,9 +118,11 @@ const Sports = () => {
                         <img src={img4} alt="" />
                       </div>
                     </td>
-                    <td className="sport10"><ul>
+                    <td className="sport10">
+                      <ul>
                         <li>Successful</li>
-                      </ul></td>
+                      </ul>
+                    </td>
                   </tr>
                   <tr>
                     <td>Lorem Ipsum</td>
@@ -78,9 +152,11 @@ const Sports = () => {
                         <img src={img4} alt="" />
                       </div>
                     </td>
-                    <td className="sport10"><ul>
+                    <td className="sport10">
+                      <ul>
                         <li>Successful</li>
-                      </ul></td>
+                      </ul>
+                    </td>
                   </tr>
                   <tr>
                     <td>Lorem Ipsum</td>
@@ -110,73 +186,11 @@ const Sports = () => {
                         <img src={img4} alt="" />
                       </div>
                     </td>
-                    <td className="sport10"><ul>
-                        <li>Successful</li>
-                      </ul></td>
-                  </tr>
-                  <tr>
-                    <td>Lorem Ipsum</td>
-                    <td>10.05.2023</td>
-                    <td>04:00 AM</td>
-                    <td>
-                      <div className="sport9">
-                        <img src={img3} alt="" />
-                        <p>vs</p>
-                        <img src={img4} alt="" />
-                      </div>
-                    </td>
-                    <td className="sport11">
+                    <td className="sport10">
                       <ul>
-                        <li>Unsuccessful</li>
+                        <li>Successful</li>
                       </ul>
                     </td>
-                  </tr>
-                  <tr>
-                    <td>Lorem Ipsum</td>
-                    <td>10.05.2023</td>
-                    <td>04:00 AM</td>
-                    <td>
-                      <div className="sport9">
-                        <img src={img3} alt="" />
-                        <p>vs</p>
-                        <img src={img4} alt="" />
-                      </div>
-                    </td>
-                    <td className="sport10"><ul>
-                        <li>Successful</li>
-                      </ul></td>
-                  </tr>
-                  <tr>
-                    <td>Lorem Ipsum</td>
-                    <td>10.05.2023</td>
-                    <td>04:00 AM</td>
-                    <td>
-                      <div className="sport9">
-                        <img src={img3} alt="" />
-                        <p>vs</p>
-                        <img src={img4} alt="" />
-                      </div>
-                    </td>
-                    <td className="sport11">
-                      <ul>
-                        <li>Unsuccessful</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Lorem Ipsum</td>
-                    <td>10.05.2023</td>
-                    <td>04:00 AM</td>
-                    <td>
-                      <div className="sport9">
-                        <img src={img3} alt="" />
-                        <p>vs</p>
-                        <img src={img4} alt="" />
-                      </div>
-                    </td>
-                    <td className="sport10"><ul>
-                        <li>Successful</li>
-                      </ul></td>
                   </tr>
                   <tr>
                     <td>Lorem Ipsum</td>
@@ -199,33 +213,33 @@ const Sports = () => {
               </table>
             </div>
             <div className="sport3">
-                <div className="sport5">
-                    <select>
-                    <option value="">Cricket</option>
-                    <option value="">Football</option>
-                    <option value="">Hockey</option>
-                    </select>
+              <div className="sport5">
+                <select>
+                  <option value="">Cricket</option>
+                  <option value="">Football</option>
+                  <option value="">Hockey</option>
+                </select>
+              </div>
+              <div className="sport6">
+                <p>Upload Articles</p>
+                <div className="sport7">
+                  <h3>180</h3>
+                  <img src={img} alt="" />
                 </div>
-                <div className="sport6">
-                    <p>Upload Articles</p>
-                    <div className="sport7">
-                    <h3>180</h3>
-                    <img src={img} alt="" />
-                    </div>
-                    <div className="sport8">
-                        <img src={img2} alt="" />
-                    </div>
+                <div className="sport8">
+                  <img src={img2} alt="" />
                 </div>
-                <div className="sport6">
-                    <p>Upload Articles</p>
-                    <div className="sport7">
-                    <h3>180</h3>
-                    <img src={img} alt="" />
-                    </div>
-                    <div className="sport8">
-                        <img src={img2} alt="" />
-                    </div>
+              </div>
+              <div className="sport6">
+                <p>Upload Articles</p>
+                <div className="sport7">
+                  <h3>180</h3>
+                  <img src={img} alt="" />
                 </div>
+                <div className="sport8">
+                  <img src={img2} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

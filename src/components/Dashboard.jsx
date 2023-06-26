@@ -73,7 +73,7 @@ const Dashboard = () => {
                 <div className="dash14">
                   <img
                     src={img2}
-                    style={{ paddingRight: "40px" }}
+                    style={{ marginRight: "100px" }}
                     alt=""
                     onClick={() => navigate("/add")}
                   />

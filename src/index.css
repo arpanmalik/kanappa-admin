@@ -21,7 +21,6 @@ code {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  position: relative;
   z-index: 0;
 }
 .login3 {
@@ -30,6 +29,8 @@ code {
 .login4 {
   width: 30%;
   background: #2965ff;
+  position: relative;
+  z-index: 0;
 }
 .login5 {
   display: block;
@@ -48,8 +49,8 @@ code {
   border-radius: 20px;
   z-index: 111;
   width: 400px;
-  top: 80px;
-  left: 55%;
+  top: 20%;
+  left: -35%;
 }
 
 .login7 img {
@@ -152,7 +153,19 @@ code {
   margin-top: 40px;
   cursor: pointer;
 }
+.side3i {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  align-items: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
 .side3 img {
+  height: 30px;
+  width: 30px;
+}
+.side3i img {
   height: 30px;
   width: 30px;
 }
@@ -164,6 +177,16 @@ code {
   line-height: 24px;
   color: #ffffff;
   margin: 0;
+}
+.side3i p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.6666;
 }
 
 /* ======= top ----- part =========*/
@@ -293,6 +316,9 @@ code {
   line-height: 18px;
   color: #0c0b0b;
 }
+select:focus {
+  outline: none;
+}
 
 .dash11 {
   width: 100%;
@@ -309,8 +335,7 @@ code {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  margin-left: 10%;
-  width: 90%;
+  margin-left: 0%;
   align-items: center;
 }
 .dash13 {
@@ -332,8 +357,8 @@ code {
   font-family: Poppins;
 }
 .dash14 {
-  width: 20%;
-  padding-left: 10%;
+  width: 30%;
+  padding-left: 0%;
 }
 
 .dash15 {
@@ -480,6 +505,9 @@ table {
   border-radius: 10px;
   background: #dadada;
   border: none;
+}
+.sport5 select:focus {
+  outline: none;
 }
 .sport6 {
   background-image: url("./Images/c19.png");
@@ -914,6 +942,12 @@ table {
   .upload5 select {
     width: 40%;
   }
+  .upload2 {
+    width: 100%;
+  }
+  .upload3 {
+    width: 100%;
+  }
   /*======= predict styling ==========*/
   .predict1 {
     flex-direction: column;
@@ -976,7 +1010,7 @@ table {
     margin-top: 10px;
   }
   /* ========= report styling ======*/
-  .report2{
-    width:100%;
+  .report2 {
+    width: 100%;
   }
 }

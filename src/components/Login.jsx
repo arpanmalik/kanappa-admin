@@ -14,9 +14,8 @@ const Login = () => {
             <img className="login5" src={img} alt="" />
             <img className="login6" src={img2} alt="" />
           </div>
-          <div className="login4"></div>
-        </div>
-        <div className="login7">
+          <div className="login4">
+          <div className="login7">
           <img src={img3} alt="" />
           <div className="login8">
             <p>Welcome back !!!</p>
@@ -34,6 +33,9 @@ const Login = () => {
             <button onClick={()=>navigate("/dashboard")}>Submit</button>
           </div>
         </div>
+          </div>
+        </div>
+        
       </div>
     </>
   );
